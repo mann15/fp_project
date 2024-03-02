@@ -1,0 +1,301 @@
+/* Assuming you have a container class for the flex layout */
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+
+.jost {
+    font-family: "Jost", sans-serif;
+   background-color: rgb(31,41,55);
+  }
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 40px;
+    padding: 10px;
+  }
+  
+  /* Styling for child elements within the container */
+  .container > * {
+    margin-right: 160px;
+  }
+  
+  /* Additional styling for text, adjust as needed */
+  .container p {
+    font-size: 12px;
+    /* Add more styles as needed */
+  }
+  /* Assuming you have a container class for flex column layout */
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px; /* Adjust as needed */
+    margin-bottom: 20px; /* Adjust as needed */
+  }
+  
+  /* Styling for space-y-10 (adjust margin-bottom as needed) */
+  .flex-container > * + * {
+    margin-top: 40px;
+  }
+  
+  /* Additional styling for text, adjust as needed */
+  .flex-container p {
+    font-size: 16px;
+    font-weight: bold; /* Add more styles as needed */
+  }
+  /* Assuming you have a container class for text styling */
+.title {
+    color: white;
+    text-align: left;
+    font-weight: 600;
+    font-size: 50px;
+    /* Add more styles as needed */
+  }
+  /* Assuming you have a container class for the flex layout */
+.ico-contain {
+    height: 25%; /* Equivalent to h-1/4 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; /* Default gap */
+  }
+  
+ 
+  
+  
+  /* If you have specific styling for medium devices */
+  @media (max-width: 768px) {
+    .flex-container {
+      gap: 2px; /* Adjusted gap for medium devices */
+    }
+  }
+  /* Assuming you have a container class for the flex layout */
+.fc {
+    display: flex;
+    flex-direction: column;
+    color: #718096; /* Equivalent to text-slate-200 */
+  }
+  
+  /* Styling for the heading */
+  .fc h3 {
+    color: rgb(148 163 184 ); /* Equivalent to text-slate-400 */
+    padding-top: 1.5rem; /* Equivalent to py-2 */
+    font-size: 1.125rem; /* Equivalent to text-lg */
+  }
+  
+  /* Styling for the links */
+  .fc a {
+    color: rgb(226 232 240); /* Equivalent to text-slate-200 */
+    padding: 0.15rem 0; /* Adjust as needed */
+    text-decoration: none;
+  }
+  
+  /* Styling for the links on hover */
+  
+  
+  /* Styling for the last text */
+  
+  
+  /* Assuming you have a container class for the full-width text */
+  .full-width-text {
+    width: 100%;
+    text-align: center;
+    color: rgb(148 163 184 );
+    padding-top: 20px;
+  }
+  
+  /* Assuming you have a container class for the space-y-3 and flex flex-col */
+.link-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.55rem; /* Equivalent to space-y-3 */
+  }
+  
+  /* Styling for the links */
+ 
+  
+  /* Styling for the links on hover */
+  .icons {
+    background: transparent;
+    top: -10px;
+    color: blue;
+    box-shadow: 0 10px 5px rgba(0, 0, 0, 0.1);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+  }
+  .icons:hover .ico {
+    color: white; /* Change icon color to white on hover */
+  }
+  .icons a::after {
+    content: "";
+    width: 30px;
+    height: 30px;
+    top: -30px;
+    left: 0;
+    background: linear-gradient(
+      40deg,
+      rgb(246, 126, 28),
+      rgb(221, 54, 54),
+      rgb(250, 41, 118),
+      rgb(214, 18, 214)
+    );
+    position: absolute;
+    transition: 0.5s;
+    
+    
+  }
+  .icons a .fab {
+    font-size: 30px;
+    position: absolute;
+    color: white;
+    z-index: 20; /* Add a higher z-index for the icons */
+  }
+  
+  .icons:hover a .fab {
+    z-index: 30; /* Increase z-index on hover */
+  }
+  
+  .icons a:hover::after {
+    top: 0;
+  }
+  
+  .icons:nth-child(1) a::after {
+    background: linear-gradient(
+      40deg,
+      rgb(246, 126, 28),
+      rgb(221, 54, 54),
+      rgb(250, 41, 118),
+      rgb(214, 18, 214)
+    );
+  }
+  
+  .icons:nth-child(2) a::after {
+    background: linear-gradient(40deg, #96d4fb, #1da1f2);
+  }
+  .icons:nth-child(4) a::after {
+    background: linear-gradient(40deg, rgb(4, 51, 98), rgb(10, 102, 194));
+  }
+  
+  .icons:nth-child(5) a::after {
+    background: linear-gradient(
+      40deg,
+      rgb(0, 255, 255),
+      rgb(0, 191, 255),
+      rgb(0, 128, 255),
+      rgb(0, 64, 255)
+    );
+  }
+  .icons:nth-child(3) a::after {
+    background: red;
+  }
+  
+  .f01 {
+    position: absolute;
+    bottom: 0;
+  }
+  
+  .ico {
+    @apply pl-1 pt-1 fab hover:text-white md:w-5 md:h-5 md:pt-[5px] md:pl-[5px];
+  }
+  .ico:hover{
+   color: white;
+  }
+  .vl {
+    position: relative;
+    border-right: 1px solid gray;
+    height: 500px;
+    border-image: linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0.01),
+        rgb(146, 145, 145),
+        rgba(255, 255, 255, 0.01)
+      )
+      1 100%;
+  }
+  
+  
+  
+  .gradient-background {
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+    box-shadow: 1px 1px 20px 3px rgba(246, 239, 245, 0.782);
+  
+  }
+  
+  
+  .gradient-background::before {
+    content: '';
+    position: absolute;
+    top: -140%;
+    left: -30%;
+   z-index: -1;
+    width: 150%;
+    height: 400%;
+    background: conic-gradient(rgb(253, 22, 149), rgb(98, 9, 171), rgb(41, 96, 225), rgba(133, 124, 129, 0.103));
+    animation: moveGradient 5s linear infinite;
+  }
+  .gradient-background::after{
+    content: '';
+    position: absolute;
+    top: -140%;
+    left: -30%;
+    z-index: -1;
+    width: 150%;
+    height: 400%;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(20px);
+   
+  }
+  @keyframes moveGradient {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  .imgbg {
+    border-radius: 2px;
+    border: solid;
+    border-color: black;
+    margin: 1%;
+  }
+  .text1{
+    position: absolute;
+    z-index: 20;
+    
+  }
+  .maincontainer{
+    position: relative;
+    }
+    .overlay{
+    position: absolute;
+    bottom: 0;
+    left:0;
+    right:0;
+    overflow: hidden;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.449);
+    background-image: linear-gradient(to bottom,rgba(255, 255, 255, 0.129),rgba(0, 0, 0, 0.858));
+    backdrop-filter: blur(20px);
+    transition: .5s ease;
+    height: 0;
+    }
+    .maincontainer:hover .overlay{
+      height: 100%;
+    }
+    .borderzz{
+      border: 2px solid #007bff; /* Set border color and width */
+    border-radius: 5px; /* Add rounded corners */
+    color: #007bff; 
+    }
+  .bordunder{
+    border-bottom: 2px solid red;
+  }
+  
+  

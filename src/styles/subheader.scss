@@ -1,0 +1,44 @@
+.subheader-container {
+    position: sticky;
+    z-index: 1024;
+    top: 66px;
+    ul {
+        padding: 0;
+        margin: 0;
+        display: flex;
+        align-items: center;
+        list-style: none;
+        backdrop-filter: blur(10px); /* Apply the blur effect */
+        background-color: rgba(202, 211, 224, 0.5); /* Add transparency for the blur effect */
+        box-shadow: 0 15px 10px -15px #1111112b;
+        padding: 0 32px;
+        overflow-x: auto;
+ /* Optional: add border-radius for rounded corners */
+    
+    
+        li {
+            a {
+                display: inline-block;
+                padding: 10px 16px;
+                text-decoration: none;
+                color: black;
+                font-size: 14px;
+                transition: background 100ms ease-in-out;
+                white-space: nowrap;
+
+                &.active, &:hover {
+                    background-color: $primary;
+                    color: $white;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:768px) {
+    .subheader-container {
+        ul {
+            padding: 0 16px;
+        }
+    }
+}
